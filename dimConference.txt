@@ -1,0 +1,169 @@
+Conference Full Name,Abbreviation,Main Topic,Subcategori Topic
+Federated Computing Reseach Conference,FCRC,General,General
+Computational Compexity Conference,CCC,Algorithm and Theory,General
+International Symposium on Fundamentals of Computation Theory,FCT,Algorithm and Theory,General
+Symposium on Foundations of Computer Science,FOCS ,Algorithm and Theory,General
+International Colloquium on Automata, Languages and Programming,ICALP,Algorithm and Theory,General
+International Symposium on Algorithms and Computation,ISAAC,Algorithm and Theory,General
+International Symposium on Mathematical Foundations of Computer Science,MFCS,Algorithm and Theory,General
+Symposium on Theoretical Aspects of Computer Science,STACS,Algorithm and Theory,General
+ACM Symposium on Theory of Computing,STOC,Algorithm and Theory,General
+European Symposium on Algorithms,ESA,Algorithm and Theory,Algorithm
+Symposium on Discrete Algorithms,SODA,Algorithm and Theory,Algorithm
+Scandinavian Symposium and Workshops on Algorithm Theory,SWAT,Algorithm and Theory,Algorithm
+Algorithms and Data Structures Symposium,WADS,Algorithm and Theory,Algorithm
+Workshop on Approximation and Online Algorithms,WAOA,Algorithm and Theory,Algorithm
+International Symposium on Graph Drawing,GD,Algorithm and Theory,Geometric Algorithms
+Symposium on Computational Geometry,SoCG,Algorithm and Theory,Geometric Algorithms
+Symposium on Logic in Computer Science,LICS,Algorithm and Theory,Logic
+International Conference on Rewriting Techniques and Applications,RTA,Algorithm and Theory,Logic
+International Conference on Implementation and Application of Automata,CIAA,Algorithm and Theory,Other Specialized Subtopics
+International Workshop on Descriptional Complexity of Formal Systems,DCFS,Algorithm and Theory,Other Specialized Subtopics
+International Conference on Developments in Language Theory,DLT,Algorithm and Theory,Other Specialized Subtopics
+International Conference on Applications and Theory of Petri Nets and Concurrency,Petri Nets,Algorithm and Theory,Other Specialized Subtopics
+International Conference on Reachability Problems,RP,Algorithm and Theory,Other Specialized Subtopics
+Symposium on Experimental Algorithms,SEA,Algorithm and Theory,Other Specialized Subtopics
+International Conference on Compiler Construction,CC,Languages and Software,Programming Languages
+European Conference on Object-Oriented Programming,ECOOP,Languages and Software,Programming Languages
+European Symposium on Programming,ESOP,Languages and Software,Programming Languages
+History of Programming Languages Conference,HOPL,Languages and Software,Programming Languages
+International Conference on Functional Programming,ICFP,Languages and Software,Programming Languages
+International Conference on Logic Programming,ICLP,Languages and Software,Programming Languages
+International Symposium on Memory Management,ISMM,Languages and Software,Programming Languages
+Conference on Object-Oriented Programming, Systems, Languages, and Applications,OOPSLA,Languages and Software,Programming Languages
+Symposium on Principles of Programming Languages,POPL,Languages and Software,Programming Languages
+Conference on Programming Language Design and Implementation,PLDI,Languages and Software,Programming Languages
+International Conference on Automated Software Engineering,ASE,Languages and Software,Software Engineering
+International Conference on Software Engineering,ICSE,Languages and Software,Software Engineering
+International Conference on Software Reuse,ICSR,Languages and Software,Software Engineering
+International Conference on Tools and Algorithms for the Construction and Analysis of Systems,TACAS,Languages and Software,Software Engineering
+International Conference on Foundations of Software Science and Computation Structures,FoSSaCS,Languages and Software,Software Engineering
+International Conference on Fundamental Approaches to Software Engineering,FASE,Languages and Software,Software Engineering
+Computer Aided Verification,CAV,Languages and Software,Formel Methods
+International Conference on Formal Techniques for Networked and Distributed Systems,FORTE,Languages and Software,Formel Methods
+International Conference on Concurrency Theory,CONCUR,Concurrent, distributed and parallel computing,General
+Distributed Event-Based Systems,DEBS,Concurrent, distributed and parallel computing,General
+International Symposium on Distributed Computing,DISC,Concurrent, distributed and parallel computing,General
+International Conference on Distributed Computing Systems,ICDCS,Concurrent, distributed and parallel computing,General
+International Conference on Parallel and Distributed Systems,ICPADS,Concurrent, distributed and parallel computing,General
+International Parallel and Distributed Processing Symposium,IPDPS,Concurrent, distributed and parallel computing,General
+Symposium on Principles of Distributed Computing,PODC,Concurrent, distributed and parallel computing,General
+Symposium on Principles and Practice of Parallel Programming,PPoPP,Concurrent, distributed and parallel computing,General
+International Colloquium on Structural Information and Communication Complexity,SIROCCO,Concurrent, distributed and parallel computing,General
+Symposium on Parallelism in Algorithms and Architectures,SPAA,Concurrent, distributed and parallel computing,General
+International Symposium on Reliable Distributed Systems,SRDS,Concurrent, distributed and parallel computing,General
+International Conference on High Performance Computing,HiPC,Concurrent, distributed and parallel computing,High-Performance Computing
+Supercomputing Conference,SC,Concurrent, distributed and parallel computing,High-Performance Computing
+Cluster, Cloud and Grid Computing,CCGRID,Concurrent, distributed and parallel computing,High-Performance Computing
+Annual Technical Conference,ATC,Operating Systems,General
+Conference on File and Storage Technologies,FAST,Operating Systems,General
+International Middleware Conference,Middleware,Operating Systems,General
+Symposium on Operating Systems Principles,SOSP,Operating Systems,General
+International Systems and Storage Conference,SYSTOR,Operating Systems,General
+International Conference on Architectural Support for Programming Languages and Operating Systems,ASPLOS,Computer Architecture,General
+International Symposium on Computer Architecture,ISCA,Computer Architecture,General
+International Symposium on Microarchitecture,MICRO,Computer Architecture,General
+International Symposium on Circuits and Systems,ISCAS,Computer Architecture,Computer Hardware
+Asia and South Pacific Design Automation Conference,ASP-DAC,Computer Architecture,Computer-Aided Design
+Design Automation Conference,DAC,Computer Architecture,Computer-Aided Design
+Design, Automation, and Test in Europe,DATE,Computer Architecture,Computer-Aided Design
+International Conference on Computer-Aided Design,ICCAD,Computer Architecture,Computer-Aided Design
+International Symposium on Physical Design,ISPD,Computer Architecture,Computer-Aided Design
+Global Communications Conference,GLobeCom,Computer Networking,General
+International Conference on Communications,ICC,Computer Networking,General
+International Conference on Service Oriented Computing,ICSOC,Computer Networking,General
+Conference on Computer Communications,INFOCOM,Computer Networking,General
+SIGCOMM Conference,SIGCOMM,Computer Networking,General
+SIGMETRICS,SIGMETRICS,Computer Networking,General
+The Workshop on Internet & Network Economics,WINE,Computer Networking,General
+European Conference on Wireless Sensor Networks,EWSN,Computer Networking,Wireless Network and Mobile Computing
+International Conference on Information Processing in Sensor Networks,IPSN,Computer Networking,Wireless Network and Mobile Computing
+International Symposium on Wearable Computers,ISWC,Computer Networking,Wireless Network and Mobile Computing
+International Symposium on Mobile Ad Hoc Networking and Computing,MobiHoc,Computer Networking,Wireless Network and Mobile Computing
+Conference on Embedded Networked Sensor Systems,SenSys,Computer Networking,Wireless Network and Mobile Computing
+International Conference on Dependable Systems and Networks,DSN,Security and Privacy,General
+USENIX Security Symposium,,Security and Privacy,General
+Applied Cryptography and Network Security,ACNS,Security and Privacy,Crytography
+Algorithmic Number Theory Symposium,ANTS,Security and Privacy,Crytography
+International Conference on the Theory and Application of Cryptology and Information Security,ASIACRYPT,Security and Privacy,Crytography
+Workshop on Cryptographic Hardware and Embedded Systems,CHES,Security and Privacy,Crytography
+International Cryptology Conference,CRYPTO,Security and Privacy,Crytography
+International Conference on the Theory and Applications of Cryptographic Techniques,EUROCRYPT,Security and Privacy,Crytography
+Fast Software Encryption Workshop,FSE,Security and Privacy,Crytography
+International Workshop on Practice and Theory in Public Key Cryptography,PKC,Security and Privacy,Crytography
+RSA Conference,RSA,Security and Privacy,Crytography
+Theory of Cryptography Conference,TCC,Security and Privacy,Crytography
+Conference on Innovative Data Systems Research,CIDR,Data Management,General
+Conference on Information and Knowledge Management,CIKM,Data Management,General
+European Conference on Information Retrieval,ECIR,Data Management,General
+European Conference on Information Systems,ECIS,Data Management,General
+International Conference on Conceptual Modeling,ER,Data Management,General
+International Conference on Database Theory,ICDT,Data Management,General
+International Conference on Information Systems,ICIS,Data Management,General
+Joint Conference on Digital Libraries,JCDL,Data Management,General
+Conference on Knowledge Discovery and Data Mining,KDD,Data Management,General
+Symposium on Principles of Database Systems,PODS,Data Management,General
+Annual International ACM SIGIR Conference,SIGIR,Data Management,General
+ACM SIGMOD Conference,SIGMOD,Data Management,General
+International Conference on Very Large Data Bases,VLDB,Data Management,General
+World Wide Web Conference,WWW,Data Management,General
+AAAI Conference on Artificial Intelligence,AAAI,Artificial Intelligence,General
+International Conference on Autonomous Agents and Multiagent Systems,AAMAS,Artificial Intelligence,General
+Canadian Conference on Artificial Intelligence,Canadian AI,Artificial Intelligence,General
+European Conference on Artificial Intelligence,ECAI,Artificial Intelligence,General
+European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases,ECML PKDD,Artificial Intelligence,General
+International Conference on Machine Learning,ICML,Artificial Intelligence,General
+International Conference on Learning Representations,ICLR,Artificial Intelligence,General
+International Joint Conference on Artificial Intelligence,IJCAI,Artificial Intelligence,General
+Conference on Neural Information Processing Systems,NeurIPS,Artificial Intelligence,General
+Artificial Evolution Conference,AE,Artificial Intelligence,Evolutionary Computation
+IEEE Congress on Evolutionary Computation,CEC,Artificial Intelligence,Evolutionary Computation
+Genetic and Evolutionary Computation Conference,GECCO,Artificial Intelligence,Evolutionary Computation
+International Joint Conference on Automated Reasoning,IJCAR,Artificial Intelligence,Automated Reasoning
+International Conference on Logic for Programming, Artificial Intelligence and Reasoning,LPAR,Artificial Intelligence,Automated Reasoning
+RuleML Symposium,RuleML,Artificial Intelligence,Automated Reasoning
+International Conference on Automated Reasoning with Analytic Tableaux and Related Methods,TABLEAUX,Artificial Intelligence,Automated Reasoning
+Workshop on Logic, Language, Information and Computation,WoLLIC,Artificial Intelligence,Automated Reasoning
+The International Conferences on Theory and Applications of Satisfiability Testing,SAT,Artificial Intelligence,Automated Reasoning
+International Conference on 3D Vision,3DV,Artificial Intelligence,Computer Vision
+Asian Conference on Computer Vision,ACCV,Artificial Intelligence,Computer Vision
+British Machine Vision Conference,BMVC,Artificial Intelligence,Computer Vision
+Conference on Computer Vision and Pattern Recognition,CVPR,Artificial Intelligence,Computer Vision
+European Conference on Computer Vision,ECCV,Artificial Intelligence,Computer Vision
+International Conference on Image Processing,ICIP,Artificial Intelligence,Computer Vision
+International Conference on Computer Vision,ICCV,Artificial Intelligence,Computer Vision
+Scandinavian Conference on Image Analysis,SCIA,Artificial Intelligence,Computer Vision
+Conference on Graphics, Patterns and Images,SIBGRAPI,Artificial Intelligence,Computer Vision
+Southwest Symposium on Image Analysis and Interpretation,SSIAI,Artificial Intelligence,Computer Vision
+International Conference on Visual Communications and Image Processing,VCIP,Artificial Intelligence,Computer Vision
+Winter Conference on Applications of Computer Vision,WACV,Artificial Intelligence,Computer Vision
+Annual Meeting of the Association for Computational Linguistics,ACL,Artificial Intelligence,Natural Language Processing
+Empirical Methods in Natural Language Processing,EMNLP,Artificial Intelligence,Natural Language Processing
+Annual Conference of the North American Chapter of the Association for Computational Linguistics,NAACL,Artificial Intelligence,Natural Language Processing
+International Committee on Computational Linguistics,COLING,Artificial Intelligence,Natural Language Processing
+Text, Speech and Dialogue,TSD,Artificial Intelligence,Natural Language Processing
+International Conference on Intelligent Text Processing and Computational Linguistics,CICLing,Artificial Intelligence,Natural Language Processing
+International Conference on Multimedia Big Data,BigMM,Computer Graphics,General
+Annual Conference of the European Association for Computer Graphics,Eurographics,Computer Graphics,General
+International Conference on Multimedia and Expo,ICME,Computer Graphics,General
+International Symposium on Multimedia,ISM,Computer Graphics,General
+International Conference on Multimedia,MM,Computer Graphics,General
+International Workshop on Multimedia Signal Processing,MMSP,Computer Graphics,General
+Symposium on Geometry Processing,SGP,Computer Graphics,General
+International Conference on Computer Graphics and Interactive Techniques,SIGGRAPH,Computer Graphics,General
+Visualization Conference,VIS,Computer Graphics,Visualization
+Eurographics Conference on Visualization,EuroVis,Computer Graphics,Visualization
+Pacific Visualization Symposium,PacificVis,Computer Graphics,Visualization
+ACM SIGACCESS Conference on Computers and Accessibility,ASSETS,Human-Computer Interaction,General
+Conference on Human Factors in Computing Systems,CHI,Human-Computer Interaction,General
+Graphics Interface,GI,Human-Computer Interaction,General
+Conference on Human-Computer Interaction with Mobile Devices and Services,MobileHCI,Human-Computer Interaction,General
+Conference on Design of Communication,SIGDOC,Human-Computer Interaction,General
+User Interface Software and Technology,USIT,Human-Computer Interaction,General
+User Modeling, Adaptation, and Personalization,UMAP,Human-Computer Interaction,General
+Computational Intelligence Methods for Bioinformatics and Biostatistics,CIBB,Bioinformatics and Computational Biology,General
+Intelligent Systems for Molecular Biology,ISMB,Bioinformatics and Computational Biology,General
+Pacific Symposium on Biocomputing,PSB,Bioinformatics and Computational Biology,General
+Research in Computational Molecular Biology,RECOMB,Bioinformatics and Computational Biology,General
+Workshop on Algorithms in Bioinformatics,WABI,Bioinformatics and Computational Biology,General
+Technical Symposium on Computer Science Education,SIGCSE,Edudation,General
