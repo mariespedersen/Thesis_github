@@ -1,1 +1,3 @@
 Jeg skal have ALT preprocessing over i dén notebook. Min descriptive skal jeg bare kunne loade filerne direkte.
+Jeg skal overveje om jeg vare skal slette alle rækker som har nan værdi i 'gender' kolonnen?
+Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på
