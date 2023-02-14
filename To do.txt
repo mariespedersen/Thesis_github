@@ -1,3 +1,16 @@
 Jeg skal have ALT preprocessing over i dén notebook. Min descriptive skal jeg bare kunne loade filerne direkte.
 Jeg skal overveje om jeg vare skal slette alle rækker som har nan værdi i 'gender' kolonnen?
-Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på
+Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på, eller skal man bare kigge på tværs af alle sprog og vælge dén som der er flest af?
+
+Preprocessing
+Invted Speakers:
+    - Fjerne A. fra personer
+    - Fjern alle tegn (nogle gange står der punktum til sidst)
+    - Særligt i TED står der flere navne på én linje
+    - Der er stadig nogle med é og tegn, de skal væk
+
+Both:
+    - File name -> Conference
+
+TODO TODAY:
+    - Læs alle mails
