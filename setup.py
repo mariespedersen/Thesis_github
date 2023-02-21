@@ -28,3 +28,4 @@ import collections
 import warnings
 warnings.filterwarnings('ignore')
 from bs4 import BeautifulSoup
+from tqdm import tqdm
