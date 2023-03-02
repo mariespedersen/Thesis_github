@@ -28,6 +28,5 @@ import collections
 import warnings
 warnings.filterwarnings('ignore')
 from bs4 import BeautifulSoup
-import wikipediaapi
 import wikipedia
 from tqdm import tqdm
