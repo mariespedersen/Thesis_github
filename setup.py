@@ -30,3 +30,4 @@ warnings.filterwarnings('ignore')
 from bs4 import BeautifulSoup
 import wikipedia
 from tqdm import tqdm
+folder_path = "G:/My Drive/Thesis/Data"
