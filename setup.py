@@ -30,4 +30,18 @@ warnings.filterwarnings('ignore')
 from bs4 import BeautifulSoup
 import wikipedia
 from tqdm import tqdm
-folder_path = "G:/My Drive/Thesis/Data"
+
+# check if a folder exists
+filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
+
+try:
+    os.chdir(filepaths[0])
+    i = 0
+except FileNotFoundError:
+    try:
+        os.chdir(filepaths[1])
+        i = 1
+    except:
+        print("No valid filepath found")
+
+filepath = filepaths[i]
