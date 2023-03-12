@@ -1,8 +1,6 @@
-Jeg skal have ALT preprocessing over i dén notebook. Min descriptive skal jeg bare kunne loade filerne direkte.
-Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på, eller skal man bare kigge på tværs af alle sprog og vælge dén som der er flest af?
+- Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på, eller skal man bare kigge på tværs af alle sprog og vælge dén som der er flest af?
 
 Preprocessing
 Invted Speakers:
     - Fjern alle tegn (nogle gange står der punktum til sidst)
-    - Særligt i TED står der flere navne på én linje
     - Der er stadig nogle med é og tegn, de skal væk
