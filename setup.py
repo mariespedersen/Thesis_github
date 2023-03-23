@@ -31,6 +31,9 @@ from bs4 import BeautifulSoup
 import wikipedia
 from tqdm import tqdm
 
+# Similarity
+from sklearn.metrics.pairwise import cosine_similarity
+
 # check if a folder exists
 filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
 
