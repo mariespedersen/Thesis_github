@@ -33,6 +33,7 @@ from tqdm import tqdm
 
 # Similarity
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.neighbors import NearestNeighbors
 
 # check if a folder exists
 filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
