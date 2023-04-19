@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
+import seaborn as sns
 import seaborn
 import matplotlib.cm as cm
 import requests
