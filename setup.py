@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
+from matplotlib.ticker import FuncFormatter
 import seaborn as sns
 import seaborn
 import matplotlib.cm as cm
