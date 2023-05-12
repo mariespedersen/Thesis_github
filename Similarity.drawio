@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-12T09:18:06.121Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="FjsFZTniwiYURoNwyBmZ" version="21.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-12T12:00:41.470Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="E-YM2wbALAMxKNKvVxNS" version="21.2.9" type="github">
   <diagram name="Page-1" id="GTRwFBnW5ZTNtZ9E9qsw">
-    <mxGraphModel dx="2074" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,13 +31,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-8" value="&lt;b&gt;Martin Grohe&lt;br&gt;&lt;/b&gt;&lt;br&gt;&amp;nbsp;log(paper): 4.8&lt;br&gt;Age: 19&lt;br&gt;Productivity: 6.6&lt;br&gt;&lt;b&gt;Invited&lt;br&gt;SODA&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;shadow=0;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="20" y="270" width="130" height="130" as="geometry" />
+          <mxGeometry x="20" y="240" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-9" value="&lt;b&gt;Petra Mutzel&lt;br&gt;&lt;/b&gt;&lt;br&gt;&amp;nbsp;log(paper): 4.8&lt;br&gt;Age: 19&lt;br&gt;Productivity: 6.7&lt;br&gt;&lt;b&gt;Proceeding&lt;br&gt;ICML&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="200" y="160" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-10" value="&lt;b&gt;Dana Ron&lt;/b&gt;&lt;br&gt;&lt;br&gt;&amp;nbsp;log(paper): 4.7&lt;br&gt;Age: 19&lt;br&gt;Productivity: 6.1&lt;br&gt;&lt;b&gt;Proceeding&lt;br&gt;SODA&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="200" y="380" width="130" height="130" as="geometry" />
+          <mxGeometry x="200" y="320" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#000000;fontColor=#333333;" parent="1" source="Kqp-bSitudwCn0S_2Lt4-13" target="Kqp-bSitudwCn0S_2Lt4-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -46,10 +46,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-13" value="&lt;b&gt;Tim Berners-Lee &lt;br&gt;&lt;/b&gt;&lt;br&gt;log(paper): 3.7&lt;br&gt;Age: 24&lt;br&gt;Productivity: 1.7&lt;br&gt;&lt;b&gt;Invited&lt;br&gt;WWW&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="385.5" y="270" width="130" height="130" as="geometry" />
+          <mxGeometry x="385.5" y="240" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-14" value="&lt;b&gt;Hilary Johnson&lt;br&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;/b&gt;log(paper): 3.7&lt;br&gt;Age: 24&lt;br&gt;Productivity: 1.7&lt;br&gt;&lt;b&gt;Proceeding&lt;br&gt;CHI&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="575.5" y="380" width="130" height="130" as="geometry" />
+          <mxGeometry x="575.5" y="320" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Kqp-bSitudwCn0S_2Lt4-16" value="&lt;b&gt;Xing Chen &lt;br&gt;&lt;/b&gt;&lt;br&gt;log(paper): 3.6&lt;br&gt;Age: 24&lt;br&gt;Productivity: 1.5&lt;br&gt;&lt;b&gt;Proceeding&lt;br&gt;AAAI&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#348ABD;strokeColor=#348abd;fontColor=#333333;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="575.5" y="160" width="130" height="130" as="geometry" />
