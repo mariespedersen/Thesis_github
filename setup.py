@@ -51,3 +51,7 @@ except FileNotFoundError:
         print("No valid filepath found")
 
 filepath = filepaths[i]
+
+
+# Path to save figures in my dropbox folder
+image_path = r'C:\Users\verga\Dropbox\Apps\Overleaf\Thesis\Pictures\\'

@@ -1,6 +1,0 @@
-- Man kan overveje om det hovedsagelgit er US og DK navne man skal kigge på, eller skal man bare kigge på tværs af alle sprog og vælge dén som der er flest af?
-
-Preprocessing
-Invted Speakers:
-    - Fjern alle tegn (nogle gange står der punktum til sidst)
-    - Der er stadig nogle med é og tegn, de skal væk
