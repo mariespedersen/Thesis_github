@@ -32,6 +32,7 @@ warnings.filterwarnings('ignore')
 from bs4 import BeautifulSoup
 import wikipedia
 from tqdm import tqdm
+from sklearn.preprocessing import MinMaxScaler
 
 # Similarity
 from sklearn.metrics.pairwise import cosine_similarity
