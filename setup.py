@@ -38,20 +38,23 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
 
-# check if a folder exists
-filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
-
-try:
-    os.chdir(filepaths[0])
-    i = 0
-except FileNotFoundError:
+# This should only be 'y' if the preprocessing.ipynb should be runned.
+ChangeFolder = input("Do you want to change the folder? (y/n) ")
+if ChangeFolder == "y":
+    
+    # check if a folder exists
+    filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
     try:
-        os.chdir(filepaths[1])
-        i = 1
-    except:
-        print("No valid filepath found")
+        os.chdir(filepaths[0])
+        i = 0
+    except FileNotFoundError:
+        try:
+            os.chdir(filepaths[1])
+            i = 1
+        except:
+            print("No valid filepath found")
 
-filepath = filepaths[i]
+    filepath = filepaths[i]
 
 
 # Path to save figures in my dropbox folder
