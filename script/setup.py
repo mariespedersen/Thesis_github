@@ -1,19 +1,11 @@
-import numpy as np
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-from matplotlib.ticker import FuncFormatter
-import seaborn as sns
 import seaborn
-import matplotlib.cm as cm
 import requests
 import json
-import pandas as pd
 import time
 import datetime
 import os
 import math
 import scipy.stats
-from unidecode import unidecode
 import sys
 import glob
 import re
@@ -22,18 +14,27 @@ import pickle
 import copy
 import nltk
 import itertools
+import collections
+import wikipedia
+import requests
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from IPython.display import Image
-import collections
+import pandas as pd
+import matplotlib.cm as cm
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 import warnings
 warnings.filterwarnings('ignore')
+
+from plotly.subplots import make_subplots
+from IPython.display import Image
 from bs4 import BeautifulSoup
-import wikipedia
 from tqdm import tqdm
 from sklearn.preprocessing import MinMaxScaler
-
+from unidecode import unidecode
+from matplotlib.ticker import FuncFormatter
 # Similarity
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
