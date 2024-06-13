@@ -21,6 +21,7 @@ wikipedia = "^1.4.0"
 tqdm = "^4.66.4"
 scikit-learn = "^1.5.0"
 ipykernel = "^6.29.4"
+datetime = "^5.5"
 
 
 [build-system]

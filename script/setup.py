@@ -41,7 +41,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
 
 # This should only be 'y' if the preprocessing.ipynb should be runned.
-ChangeFolder = input("Do you want to change the folder? (y/n) ")
+# ChangeFolder = input("Do you want to change the folder? (y/n) ")
+ChangeFolder = 'n'
 if ChangeFolder == "y":
     
     # check if a folder exists
@@ -57,7 +58,6 @@ if ChangeFolder == "y":
             print("No valid filepath found")
 
     filepath = filepaths[i]
-
 
 # Path to save figures in my dropbox folder
 image_path = r'C:\Users\verga\Dropbox\Apps\Overleaf\Thesis\Pictures\\'
