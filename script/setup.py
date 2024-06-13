@@ -35,6 +35,7 @@ from tqdm import tqdm
 from sklearn.preprocessing import MinMaxScaler
 from unidecode import unidecode
 from matplotlib.ticker import FuncFormatter
+from datetime import datetime
 # Similarity
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
