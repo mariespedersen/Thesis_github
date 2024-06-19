@@ -1,0 +1,8 @@
+Spawning shell within /home/elsa/Conferences-fairness/Conferences-fairness/.venv
+
+(25, 'Inappropriate ioctl for device')
+Updating dependencies
+Resolving dependencies...
+
+No dependencies to install or update
+slurmstepd: error: *** JOB 187900 ON cn1 CANCELLED AT 2024-06-14T10:40:36 ***

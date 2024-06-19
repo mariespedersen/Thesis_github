@@ -1,4 +1,4 @@
-# importing os module
+# running setup.py
 import seaborn
 import requests
 import json
@@ -67,6 +67,9 @@ image_path = r'C:\Users\verga\Dropbox\Apps\Overleaf\Thesis\Pictures\\'
 
 def main():
 
+    print('*** RUNNING SCRIPT get_citation.py ***')
+    print()
+
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("Loading of data, time:", current_time)
@@ -78,74 +81,107 @@ def main():
     df = pd.concat([df_invited, df_proceedings], ignore_index=True)
     pd.set_option('display.max_rows', 15)
 
+    # consider just unique name
     full_name = df['Full name'].unique()
-
-    ids = []
-    orcids = []
-    works_count = []
-    results = []
     
     BASE_URL = 'https://api.openalex.org/'
     ENDPOINT = 'authors'
     MAIL = 'elsa@itu.dk'
+    mail = f'&mailto={MAIL}'
 
     current_time = (datetime.now()).strftime("%H:%M:%S")
     print("Start author data retreival, time:", current_time)
 
-    for i in full_name:
+    chunk_size = 100
 
-        filter = f'?search={i}'
-        mail = f'&mailto={MAIL}'
-        complete_url = BASE_URL + ENDPOINT + filter + mail
-        response_json = requests.get(complete_url).json()
-        author_data = response_json['results']
+    # creating an empty dataframe
+    columns = ['Full name', 'OpenAlex ID', 'ORCID', 'Works count']
+    df_author_id =  pd.DataFrame({col: [None]*len(full_name) for col in columns})
 
-        results.append(len(author_data))
+    for j in range(0, len(full_name), chunk_size):
 
-        # no results found
-        if len(author_data) == 0:
+        chunk = full_name[j:j+chunk_size]
+        ids = []
+        orcids = []
+        works_count = []
+        results = []
+        failure = False
 
-            works_count.append([None])
-            ids.append([None])
-            orcids.append([None])
+        for i in chunk:
 
-        # found only one results
-        if len(author_data) == 1:
-
-            works_count.append([author_data[0]['works_count']])
-            ids.append([author_data[0]['id']])
-            orcids.append([author_data[0]['orcid']])
-
-        # found more results
-        else:
+            filter = f'?search={i}'
+            complete_url = BASE_URL + ENDPOINT + filter + mail
             
-            # store a list with the works count for every result
-            works_count.append([author_data[result]['works_count'] for result in range(len(author_data))])
-            # store a list with the ids for every result
-            ids.append([author_data[result]['id'] for result in range(len(author_data))])
-            # check on the orcid codes
-            orcid_codes = [author_data[result]['orcid'] for result in range(len(author_data))]
-            different_orcids = set(code for code in orcid_codes if code is not None)
-            # manually adding a None value if no orcid code is found
-            if not different_orcids:
-                different_orcids.add(None)
+            try:
+                response = requests.get(complete_url)
+                response.raise_for_status()
+                response_json = response.json()
+                author_data = response_json['results']
 
-            orcids.append(list(different_orcids))
-    
-    now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
-    print("Finish author data retreival\nStrating building dataframe, time:", current_time)
+            except requests.exceptions.RequestException as e:
+                print(f"Request failed for {i}: {e}")
+                failure = True
+                continue
+            except ValueError as e:
+                print(f"JSON decoding failed for {i}: {e}")
+                failure = True
+                continue
+            except requests.exceptions.JSONDecodeError as e:
+                print(f"JSON decoding failed for {i}: {e}")
+                failure = True
+                continue
 
-    df_author_id = pd.DataFrame(columns = ['Full name', 'OpenAlex ID', 'ORCID', 'Works count'])
-    df_author_id['Full name'] = full_name
-    df_author_id['OpenAlex ID'] = ids
-    df_author_id['ORCID'] = orcids
-    df_author_id['Works count'] = works_count
+            results.append(len(author_data))
+
+            # API failures
+            if failure:
+
+                # nan value is manually add to the arrays
+                works_count.append([float('nan')])
+                ids.append([float('nan')])
+                orcids.append([float('nan')])
+
+            # no results found
+            elif len(author_data) == 0:
+
+                works_count.append([None])
+                ids.append([None])
+                orcids.append([None])
+
+            # found only one results
+            elif len(author_data) == 1:
+
+                works_count.append([author_data[0]['works_count']])
+                ids.append([author_data[0]['id']])
+                orcids.append([author_data[0]['orcid']])
+
+            # found more results
+            else:
+                
+                # store a list with the works count for every result
+                works_count.append([author_data[result]['works_count'] for result in range(len(author_data))])
+                # store a list with the ids for every result
+                ids.append([author_data[result]['id'] for result in range(len(author_data))])
+                # check on the orcid codes
+                orcid_codes = [author_data[result]['orcid'] for result in range(len(author_data))]
+                different_orcids = set(code for code in orcid_codes if code is not None)
+                # manually adding a None value if no orcid code is found
+                if not different_orcids:
+                    different_orcids.add(None)
+
+                orcids.append(list(different_orcids))
+
+        # the dataframe is filled after every chunk to not loose data
+        df_author_id['Full name'][j:j+chunk_size] = chunk
+        df_author_id['OpenAlex ID'][j:j+chunk_size] = ids
+        df_author_id['ORCID'][j:j+chunk_size] = orcids
+        df_author_id['Works count'][j:j+chunk_size] = works_count
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("FInish biulding dataframe\nStart saving data, time:", current_time)
 
+    # converitng the dataframe to a csv and saving it among the data
     filename = "authorID.csv" # or factProceedings.csv
     filepath = "./Data/"
     df_author_id.to_csv(os.path.join(filepath, filename), index=False)
