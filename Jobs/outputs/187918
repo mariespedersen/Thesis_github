@@ -1,0 +1,14 @@
+Spawning shell within /home/elsa/Conferences-fairness/Conferences-fairness/.venv
+
+(25, 'Inappropriate ioctl for device')
+Updating dependencies
+Resolving dependencies...
+
+No dependencies to install or update
+*** RUNNING SCRIPT get_citation.py ***
+
+Loading of data, time: 10:45:54
+Start author data retreival, time: 10:45:54
+FInish biulding dataframe
+Start saving data, time: 22:05:22
+The file is now saved, time: 22:05:24
