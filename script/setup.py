@@ -16,6 +16,7 @@ import nltk
 import itertools
 import collections
 import wikipedia
+import math
 import requests
 import plotly.express as px
 import plotly.graph_objects as go
@@ -36,6 +37,7 @@ from sklearn.preprocessing import MinMaxScaler
 from unidecode import unidecode
 from matplotlib.ticker import FuncFormatter
 from datetime import datetime
+from collections import Counter
 # Similarity
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
