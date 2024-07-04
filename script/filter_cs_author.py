@@ -1,5 +1,5 @@
 import os
-import script.preprocessing as pre
+import preprocessing as pre
 
 current_dir = os.path.dirname(__file__)  # Directory of the current script
 setup_path = os.path.join(current_dir, 'setup.py')
@@ -46,9 +46,11 @@ def main():
 
     chunk_size = 100
 
-    for j in range(0, len(df_disambiguated), chunk_size):
+    # DELETE LIMITS!!
+    chunk_size = 10
+    for j in range(0, len(df_disambiguated[0:100]), chunk_size):
 
-        chunk = df_disambiguated[j:j+chunk_size]
+        chunk = df_disambiguated[j:j+chunk_size]['OpenAlex ID']
 
         for index, possible_authors in chunk.items():
 
@@ -57,7 +59,7 @@ def main():
 
             for candidate in possible_authors:
 
-                filtered_authors = filter_authors_for_field(candidate)
+                filtered_authors = pre.filter_authors_for_field(candidate)
                 if filtered_authors is not None:
                     cs_authors.append(filtered_authors[0])
                     number_cs_works.append(filtered_authors[1])
