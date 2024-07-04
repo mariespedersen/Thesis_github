@@ -46,7 +46,9 @@ def main():
 
     chunk_size = 100
 
-    for j in range(0, len(df_disambiguated), chunk_size):
+    # DELETE LIMITS!!
+    chunk_size = 10
+    for j in range(0, len(df_disambiguated[0:100]), chunk_size):
 
         chunk = df_disambiguated[j:j+chunk_size]['OpenAlex ID']
 
