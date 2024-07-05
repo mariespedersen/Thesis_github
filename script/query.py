@@ -80,8 +80,8 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
     ENDPOINT = 'works'
     
     next_cursor = "*"
-    works_topics = [] # contains the topics for all the work of the searche author
-    cs_works = 0
+    works_topics = [] # contains the topics for all the works of the searche author
+    works_in_the_field = 0
 
 
     while True:
@@ -103,11 +103,9 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
         else:
             break
 
-    for works_topic in works_topics:
-        fields = [field_id['field']['id'] for field_id in works_topic['topics']]
+    fields = [work_topic['topics'][0]['field']['id'] if len(work_topic['topics']) != 0 else None for work_topic in works_topics]
 
-        if any(field  == field_id for field in fields):
-            cs_works += 1
+    works_in_the_field = fields.count(field_id)
 
-    if cs_works >= 1:
-        return author_id, cs_works
+    if works_in_the_field >= 1:
+        return author_id, works_in_the_field
