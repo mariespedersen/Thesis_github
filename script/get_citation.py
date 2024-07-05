@@ -52,7 +52,7 @@ def main():
 
             while True:
 
-                filter = f'?search={name}&&select=id,orcid,works_count&per-page=200&cursor={next_cursor}'
+                filter = f'?search={name}&select=id,orcid,works_count&per-page=200&cursor={next_cursor}'
                 ENDPOINT = 'authors'
                 complete_url = q.BASE_URL + ENDPOINT + filter + q.mail
                 response_json = q.API_query(complete_url)
