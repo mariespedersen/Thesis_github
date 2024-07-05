@@ -1,68 +1,10 @@
-# running setup.py
-import seaborn
-import requests
-import json
-import time
-import datetime
 import os
-import math
-import scipy.stats
-import sys
-import glob
-import re
-import random
-import pickle
-import copy
-import nltk
-import itertools
-import collections
-import wikipedia
-import requests
-import plotly.express as px
-import plotly.graph_objects as go
-import pandas as pd
-import matplotlib.cm as cm
-import seaborn as sns
-import numpy as np
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-import warnings
-warnings.filterwarnings('ignore')
 
-from plotly.subplots import make_subplots
-from IPython.display import Image
-from bs4 import BeautifulSoup
-from tqdm import tqdm
-from sklearn.preprocessing import MinMaxScaler
-from unidecode import unidecode
-from matplotlib.ticker import FuncFormatter
-from datetime import datetime 
+current_dir = os.path.dirname(__file__)  # Directory of the current script
+setup_path = os.path.join(current_dir, 'setup.py')
 
-# Similarity
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.neighbors import NearestNeighbors
-
-# This should only be 'y' if the preprocessing.ipynb should be runned.
-# ChangeFolder = input("Do you want to change the folder? (y/n) ")
-ChangeFolder = 'n'
-if ChangeFolder == "y":
-    
-    # check if a folder exists
-    filepaths = ["G:/My Drive/Thesis/Data", "G:\Mit drev\Thesis\Data"]
-    try:
-        os.chdir(filepaths[0])
-        i = 0
-    except FileNotFoundError:
-        try:
-            os.chdir(filepaths[1])
-            i = 1
-        except:
-            print("No valid filepath found")
-
-    filepath = filepaths[i]
-
-# Path to save figures in my dropbox folder
-image_path = r'C:\Users\verga\Dropbox\Apps\Overleaf\Thesis\Pictures\\'
+with open(setup_path) as file:
+    exec(file.read())
 
 
 def main():
@@ -73,7 +15,7 @@ def main():
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("Loading of data, time:", current_time)
-    
+
     # load data
     df_invited = pd.read_csv('Data/factInvited.csv')
     df_proceedings = pd.read_csv('Data/factProceedings.csv')
@@ -83,11 +25,6 @@ def main():
 
     # consider just unique name
     full_name = df['Full name'].unique()
-    
-    BASE_URL = 'https://api.openalex.org/'
-    ENDPOINT = 'authors'
-    MAIL = 'elsa@itu.dk'
-    mail = f'&mailto={MAIL}'
 
     current_time = (datetime.now()).strftime("%H:%M:%S")
     print("Start author data retreival, time:", current_time)
@@ -98,43 +35,46 @@ def main():
     columns = ['Full name', 'OpenAlex ID', 'ORCID', 'Works count']
     df_author_id =  pd.DataFrame({col: [None]*len(full_name) for col in columns})
 
-    for j in range(0, len(full_name), chunk_size):
+    for j in range(0, len(full_name), chunk_size): 
 
         chunk = full_name[j:j+chunk_size]
         ids = []
         orcids = []
         works_count = []
         results = []
+        results_2 = []
         failure = False
 
-        for i in chunk:
+        for name in chunk:
 
-            filter = f'?search={i}'
-            complete_url = BASE_URL + ENDPOINT + filter + mail
-            
-            try:
-                response = requests.get(complete_url)
-                response.raise_for_status()
-                response_json = response.json()
-                author_data = response_json['results']
+            author_data = []
+            next_cursor = '*'
 
-            except requests.exceptions.RequestException as e:
-                print(f"Request failed for {i}: {e}")
-                failure = True
-                continue
-            except ValueError as e:
-                print(f"JSON decoding failed for {i}: {e}")
-                failure = True
-                continue
-            except requests.exceptions.JSONDecodeError as e:
-                print(f"JSON decoding failed for {i}: {e}")
-                failure = True
-                continue
+            while True:
+
+                filter = f'?search={name}&&select=id,orcid,works_count&per-page=200&cursor={next_cursor}'
+                ENDPOINT = 'authors'
+                complete_url = q.BASE_URL + ENDPOINT + filter + q.mail
+                response_json = q.API_query(complete_url)
+                
+                if response_json is True:
+                    break
+                
+                author_data.extend(response_json['results'])
+
+                if 'meta' in response_json and 'next_cursor' in response_json['meta']:
+                    next_cursor = response_json['meta']['next_cursor']
+                
+                    if next_cursor is None:
+                        break
+                else:
+                    break
+
 
             results.append(len(author_data))
 
-            # API failures
-            if failure:
+                # API failures
+            if response_json is True:
 
                 # nan value is manually add to the arrays
                 works_count.append([float('nan')])
@@ -157,19 +97,17 @@ def main():
 
             # found more results
             else:
-                
                 # store a list with the works count for every result
                 works_count.append([author_data[result]['works_count'] for result in range(len(author_data))])
                 # store a list with the ids for every result
                 ids.append([author_data[result]['id'] for result in range(len(author_data))])
                 # check on the orcid codes
                 orcid_codes = [author_data[result]['orcid'] for result in range(len(author_data))]
-                different_orcids = set(code for code in orcid_codes if code is not None)
                 # manually adding a None value if no orcid code is found
-                if not different_orcids:
-                    different_orcids.add(None)
+                if not orcid_codes:
+                    orcid_codes.add(None)
 
-                orcids.append(list(different_orcids))
+                orcids.append(list(orcid_codes))
 
         # the dataframe is filled after every chunk to not loose data
         df_author_id['Full name'][j:j+chunk_size] = chunk
@@ -179,10 +117,10 @@ def main():
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-    print("FInish biulding dataframe\nStart saving data, time:", current_time)
+    print("Finish biulding dataframe\nStart saving data, time:", current_time)
 
     # converitng the dataframe to a csv and saving it among the data
-    filename = "authorID.csv" # or factProceedings.csv
+    filename = "authorID.csv" 
     filepath = "./Data/"
     df_author_id.to_csv(os.path.join(filepath, filename), index=False)
 

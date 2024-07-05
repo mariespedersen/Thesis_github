@@ -1,5 +1,4 @@
 import os
-import preprocessing as pre
 
 current_dir = os.path.dirname(__file__)  # Directory of the current script
 setup_path = os.path.join(current_dir, 'setup.py')
@@ -46,7 +45,9 @@ def main():
 
     chunk_size = 100
 
-    for j in range(0, len(df_disambiguated), chunk_size):
+    # DELETE LIMITS!!
+    chunk_size = 10
+    for j in range(0, len(df_disambiguated[0:100]), chunk_size):
 
         chunk = df_disambiguated[j:j+chunk_size]['OpenAlex ID']
 

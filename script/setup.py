@@ -29,6 +29,10 @@ plt.style.use('ggplot')
 import warnings
 warnings.filterwarnings('ignore')
 
+# my packages
+import preprocessing as pre
+import query as q
+
 from plotly.subplots import make_subplots
 from IPython.display import Image
 from bs4 import BeautifulSoup
