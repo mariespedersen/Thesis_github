@@ -14,11 +14,11 @@ def main():
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("Loading of data, time:", current_time)
-    
+
     # load data from existing dataframe
     data_types = {
-              'Full name' : str
-             }
+                'Full name' : str
+                }
 
     converters = {
                 'OpenAlex ID' : pre.tranform_to_list_of_string,
@@ -32,22 +32,18 @@ def main():
     df_author['Number of results'] = number_of_results
 
     # define the dataframe with disambiguated authors
-    df_disambiguated = df_author[(df_author['Number of results'] > 1) & (df_author['Number of results'] < 25)]
+    df_disambiguated = df_author[(df_author['Number of results'] > 1)]
 
     df_cleaned= df_author.copy()
     df_cleaned['Computer science works'] = [None]*len(df_author)
-    chunk_size = 100
     filename = 'authorID_cleaned.csv'
     filepath = './Data/'
+    chunk_size = 100
 
     current_time = (datetime.now()).strftime("%H:%M:%S")
     print("Start author data retreival, time:", current_time)
 
-    chunk_size = 100
-
-    # DELETE LIMITS!!
-    chunk_size = 10
-    for j in range(0, len(df_disambiguated[0:100]), chunk_size):
+    for j in range(0, len(df_disambiguated), chunk_size):
 
         chunk = df_disambiguated[j:j+chunk_size]['OpenAlex ID']
 
@@ -57,8 +53,8 @@ def main():
             cs_authors = []
 
             for candidate in possible_authors:
-
-                filtered_authors = pre.filter_authors_for_field(candidate)
+                
+                filtered_authors = q.filter_authors_for_field(candidate)
                 if filtered_authors is not None:
                     cs_authors.append(filtered_authors[0])
                     number_cs_works.append(filtered_authors[1])
