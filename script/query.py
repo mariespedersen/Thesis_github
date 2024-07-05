@@ -83,11 +83,10 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
     works_topics = [] # contains the topics for all the works of the searche author
     works_in_the_field = 0
 
-
     while True:
         filter = f'?filter=author.id:{author_id}&select=topics&per-page=200&cursor={next_cursor}'
         works_url = BASE_URL + ENDPOINT + filter + mail
-        response_json = API_query(works_url)
+        response_json = q.API_query(works_url)
 
         if response_json is True:
             break
@@ -103,7 +102,21 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
         else:
             break
 
-    fields = [work_topic['topics'][0]['field']['id'] if len(work_topic['topics']) != 0 else None for work_topic in works_topics]
+    # obtaining the primary topic for each work
+    primary_topic = []
+    for wt in works_topics:
+
+        if len(wt) != 0:
+
+            if len(wt['topics']) != 0:
+                primary_topic.append(wt['topics'][0])
+            else:
+                primary_topic.append(None)
+        else:
+            primary_topic.append(None)
+
+    # obtaining the field for each work
+    fields = [work['field']['id'] if work is not None else None for work in primary_topic]
 
     works_in_the_field = fields.count(field_id)
 
