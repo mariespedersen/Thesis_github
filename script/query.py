@@ -7,7 +7,6 @@ with open(setup_path) as file:
     exec(file.read())
 
 
-
 BASE_URL = 'https://api.openalex.org/'
 MAIL = 'elsa@itu.dk'
 mail = f'&mailto={MAIL}'
