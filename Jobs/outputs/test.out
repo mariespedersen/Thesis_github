@@ -1,0 +1,10 @@
+Spawning shell within /home/elsa/Conferences-fairness/Conferences-fairness/.venv
+
+(25, 'Inappropriate ioctl for device')
+Updating dependencies
+Resolving dependencies...
+
+Package operations: 0 installs, 2 updates, 0 removals
+
+  • Updating certifi (2024.6.2 -> 2024.7.4)
+  • Updating urllib3 (2.2.1 -> 2.2.2)
