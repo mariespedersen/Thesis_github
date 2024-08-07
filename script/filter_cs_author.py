@@ -36,7 +36,7 @@ def main():
 
     df_cleaned= df_author.copy()
     df_cleaned['Computer science works'] = [None]*len(df_author)
-    filename = 'authorID_cleaned.csv'
+    filename = 'authorID_cleaned.csv.gz'
     filepath = './Data/'
     chunk_size = 100
 
@@ -63,7 +63,7 @@ def main():
             df_cleaned.at[index, 'Computer science works'] = number_cs_works
         
         # saving and overwriting the dataframe every chunk
-        df_cleaned.to_csv(os.path.join(filepath, filename), index=False)
+        df_cleaned.to_csv(os.path.join(filepath, filename), index=False, compression='gzip')
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
