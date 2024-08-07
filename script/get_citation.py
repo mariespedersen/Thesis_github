@@ -52,7 +52,7 @@ def main():
 
             while True:
 
-                filter = f'?search={name}&&select=id,orcid,works_count&per-page=200&cursor={next_cursor}'
+                filter = f'?search={name}&select=id,orcid,works_count&per-page=200&cursor={next_cursor}'
                 ENDPOINT = 'authors'
                 complete_url = q.BASE_URL + ENDPOINT + filter + q.mail
                 response_json = q.API_query(complete_url)
@@ -120,9 +120,9 @@ def main():
     print("Finish biulding dataframe\nStart saving data, time:", current_time)
 
     # converitng the dataframe to a csv and saving it among the data
-    filename = "authorID.csv" 
+    filename = "authorID.csv.gz" 
     filepath = "./Data/"
-    df_author_id.to_csv(os.path.join(filepath, filename), index=False)
+    df_author_id.to_csv(os.path.join(filepath, filename), index=False, compression='gzip')
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
