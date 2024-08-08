@@ -73,7 +73,7 @@ def main():
 
             results.append(len(author_data))
 
-                # API failures
+            # API failures
             if response_json is True:
 
                 # nan value is manually add to the arrays
