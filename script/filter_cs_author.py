@@ -26,7 +26,7 @@ def main():
                 'Works count' : pre.tranform_to_list_of_int
     }
 
-    df_author = pd.read_csv('Data/authorID.csv', dtype=data_types, converters=converters)
+    df_author = pd.read_csv('Data/authorID.csv.gz', dtype=data_types, converters=converters, compression='gzip')
     # adding column with number of results
     number_of_results = df_author['OpenAlex ID'].apply(len)
     df_author['Number of results'] = number_of_results
@@ -34,8 +34,9 @@ def main():
     # define the dataframe with disambiguated authors
     df_disambiguated = df_author[(df_author['Number of results'] > 1)]
 
-    df_cleaned= df_author.copy()
+    df_cleaned = df_author.copy()
     df_cleaned['Computer science works'] = [None]*len(df_author)
+    df_cleaned['Cleaned'] = [False]*len(df_author)
     filename = 'authorID_cleaned.csv.gz'
     filepath = './Data/'
     chunk_size = 100
@@ -61,6 +62,7 @@ def main():
             
             df_cleaned.at[index, 'OpenAlex ID'] = cs_authors
             df_cleaned.at[index, 'Computer science works'] = number_cs_works
+            df_cleaned.at[index, 'Cleaned'] = True
         
         # saving and overwriting the dataframe every chunk
         df_cleaned.to_csv(os.path.join(filepath, filename), index=False, compression='gzip')
