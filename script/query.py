@@ -74,7 +74,7 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
     The classification is done based on the primary_topic (topic with higest score).
     The autor is considered belonging to the given filed if at least one of its works belong to the field.
 
-    OpenAlex follows this hierarchy of classifications of works: domain > field > subfiled > topic
+    OpenAlex follows this hierarchy of classifications of works: domain > field > subfield > topic
     '''
     ENDPOINT = 'works'
     
@@ -83,7 +83,7 @@ def filter_authors_for_field(author_id, field_id='https://openalex.org/fields/17
     works_in_the_field = 0
 
     while True:
-        filter = f'?filter=author.id:{author_id}&select=topics&per-page=200&cursor={next_cursor}'
+        filter = f'?filter=author.id:{author_id}&primary_topic.id={field_id}&select=topics&per-page=200&cursor={next_cursor}'
         works_url = BASE_URL + ENDPOINT + filter + mail
         response_json = q.API_query(works_url)
 
